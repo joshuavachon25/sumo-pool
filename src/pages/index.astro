@@ -1,0 +1,77 @@
+---
+import Layout from '../layouts/Layout.astro';
+import pool from '../data/aki2023.json';
+
+let pageTitle =  'Sumo Kyokai'
+let query = await fetch(`https://www.sumo.or.jp/EnHonbashoMain/torikumiAjax/1/${import.meta.env.PUBLIC_BASHO_DAY}`)
+const data = await query.json();
+let torikumi = data["TorikumiData"]
+let sumos = {}
+torikumi.forEach((sumo) => {
+	sumos[sumo.east.shikona_eng.toLowerCase()] = {en: sumo.east.shikona_eng,jp: sumo.east.shikona, win: sumo.east.won_number, lost: sumo.east.lost_number}
+	sumos[sumo.west.shikona_eng.toLowerCase()] ={en: sumo.west.shikona_eng,jp: sumo.west.shikona, win: sumo.west.won_number,lost: sumo.west.lost_number}
+})
+let resultats = []
+pool.forEach((joueur) => {
+	resultats.push({nom: joueur.nom, rang: joueur.prev_rank, prev: joueur.prev_pts, avatar: joueur.avatar, fr: joueur.shikona_fr, jp: joueur.shikona_jp, score: sumos[joueur.choix[0].toLowerCase()].win + sumos[joueur.choix[1].toLowerCase()].win + sumos[joueur.choix[2].toLowerCase()].win + sumos[joueur.choix[3].toLowerCase()].win + sumos[joueur.choix[4].toLowerCase()].win + sumos[joueur.choix[5].toLowerCase()].win, choix: joueur.choix.join(', ') })
+})
+resultats.sort((j1, j2) => (j1.score < j2.score) ? 1 : (j1.score > j2.score) ? -1: 0)
+
+---
+
+<Layout title={pageTitle}>
+	<div class="px-4 sm:px-6 lg:px-8">
+
+		<div class="mt-8 flow-root">
+			<div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+				<div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+					<table class="min-w-full divide-y divide-gray-300">
+						<thead>
+						<tr>
+							<th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0">Shikona</th>
+							<th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Dernier tournoi</th>
+							<th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Points</th>
+
+							<th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-0">
+								<span class="sr-only">Edit</span>
+							</th>
+						</tr>
+						</thead>
+						<tbody class="divide-y divide-gray-200 bg-white">
+						{resultats.map((joueur, index) => (
+
+							<tr>
+								<td class="whitespace-nowrap py-5 pl-4 pr-3 text-sm sm:pl-0">
+									<div class="flex items-center">
+										<div class="h-11 w-11 flex-shrink-0">
+											<img class="h-11 w-11 rounded-full" src={joueur.avatar} alt="">
+										</div>
+										<div class="ml-4">
+											<div class="font-medium text-gray-900">{joueur.fr} - {joueur.jp}</div>
+											<div class="mt-1 text-gray-500">{joueur.nom}</div>
+										</div>
+									</div>
+								</td>
+								<td class="whitespace-nowrap px-3 py-5 text-sm text-gray-500">
+									<div class="text-gray-900">{joueur.rang > 0 ? joueur.rang + "e position": "Non classé"}</div>
+									<div class="mt-1 text-gray-500">{joueur.prev > 0 ? joueur.prev + " points": "Aucun point"}</div>
+								</td>
+								<td class="whitespace-nowrap px-3 py-5 text-sm text-gray-500">
+									<span class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-md font-medium text-green-700 ring-1 ring-inset ring-green-600/20">{joueur.score} points</span>
+								</td>
+
+								<td class="relative whitespace-nowrap py-5 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
+									<p>{joueur.choix}</p>
+
+								</td>
+							</tr>
+						))}
+
+						</tbody>
+					</table>
+					<p class="text-xs pt-10">Note: Basé sur l'api de la <a href="https://www.sumo.or.jp/EnHonbashoMain/torikumiAjax/1/1/" class="text-red-700">Nihon Sumo Kyokai</a> et automatisé via Github CI</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</Layout>

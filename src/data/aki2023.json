@@ -1,0 +1,87 @@
+[
+  {
+    "nom": "Daniele",
+    "shikona_fr": "Daniere",
+    "shikona_jp":"ダニエレ",
+    "prev_rank": 8,
+    "prev_pts": 34,
+    "avatar": "",
+    "choix": ["Hoshoryu", "Wakamotoharu", "Gonoyama", "Kinbozan", "Atamifuji", "Kagayaki"]
+  },
+  {
+    "nom": "Sébastien",
+    "shikona_fr": "Sebasuchan",
+    "shikona_jp":"セバスチャン",
+    "prev_rank": 6,
+    "prev_pts": 37,
+    "avatar": "",
+    "choix": ["Kirishima", "Nishikigi", "Hokutofuji", "Gonoyama", "Kotoshoho", "Daishoho"]
+  },
+  {
+    "nom": "Francis",
+    "shikona_fr": "Furanshisu",
+    "shikona_jp":"フランシス",
+    "prev_rank": 6,
+    "prev_pts": 37,
+    "avatar": "",
+    "choix": ["Hoshoryu", "Kotonowaka", "Hokutofuji", "Ryuden", "Takarafuji", "Atamifuji"]
+  },
+  {
+    "nom": "Benjamin",
+    "shikona_fr": "Benjamin",
+    "shikona_jp":"ベンジャミン",
+    "prev_rank": -1,
+    "prev_pts": -1,
+    "avatar": "",
+    "choix": ["Kirishima", "Daieisho", "Tamawashi", "Gonoyama", "Shonannoumi", "Takarafuji"]
+  },
+  {
+    "nom": "Johnnatan",
+    "shikona_fr": "Yonnasan",
+    "shikona_jp":"ジョナサン",
+    "prev_rank": 2,
+    "prev_pts": 50,
+    "avatar": "",
+    "choix": ["Hoshoryu", "Kotonowaka", "Hokutofuji", "Gonoyama", "Shonannoumi", "Atamifuji"]
+  },  {
+    "nom": "Félix-Olivier",
+    "shikona_fr": "Ferikkusu",
+    "shikona_jp":"フェリックス",
+    "prev_rank": -1,
+    "prev_pts": -1,
+    "avatar": "",
+    "choix": ["Wakamotoharu", "Kotonowaka", "Hokutofuji", "Shonannoumi", "Gonoyama", "Atamifuji"]
+  },  {
+    "nom": "Jérémie",
+    "shikona_fr": "Eremiya",
+    "shikona_jp":"エレミヤ",
+    "prev_rank": 4,
+    "prev_pts": 42,
+    "avatar": "",
+    "choix": ["Hoshoryu", "Kotonowaka", "Hokutofuji", "Shonannoumi", "Ryuden", "Atamifuji"]
+  },  {
+    "nom": "Jonathan",
+    "shikona_fr": "Jonasan",
+    "shikona_jp":"ジョナサン",
+    "prev_rank": 1,
+    "prev_pts": 51,
+    "avatar": "",
+    "choix": ["Hoshoryu", "Kotonowaka", "Hokutofuji", "Abi", "Kotoshoho", "Atamifuji"]
+  },  {
+    "nom": "Salma",
+    "shikona_jp": "サルマ",
+    "shikona_fr":"Saruma",
+    "prev_rank": 0,
+    "prev_pts": 0,
+    "avatar": "",
+    "choix": ["Hoshoryu", "Kotonowaka", "Tamawashi", "Kinbozan", "Atamifuji", "Kagayaki"]
+  },  {
+    "nom": "Joshua",
+    "shikona_fr": "Yoshua",
+    "shikona_jp":"ヨシュア",
+    "prev_rank": 3,
+    "prev_pts": 49,
+    "avatar": "",
+    "choix": ["Kirishima", "Hoshoryu", "Asanoyama", "Gonoyama", "Takayasu", "Kinbozan"]
+  }
+]
