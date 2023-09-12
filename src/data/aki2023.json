@@ -6,7 +6,8 @@
     "prev_rank": 8,
     "prev_pts": 34,
     "avatar": "/assets/daniele.png",
-    "choix": ["Hoshoryu", "Wakamotoharu", "Gonoyama", "Kinbozan", "Atamifuji", "Kagayaki"]
+    "choix": ["Hoshoryu", "Wakamotoharu", "Gonoyama", "Kinbozan", "Atamifuji", "Kagayaki"],
+    "score": [0, 5, 7]
   },
   {
     "nom": "Sébastien",
@@ -15,7 +16,8 @@
     "prev_rank": 6,
     "prev_pts": 37,
     "avatar": "/assets/sebastien.png",
-    "choix": ["Kirishima", "Nishikigi", "Hokutofuji", "Gonoyama", "Kotoshoho", "Daishoho"]
+    "choix": ["Kirishima", "Nishikigi", "Hokutofuji", "Gonoyama", "Kotoshoho", "Daishoho"],
+    "score": [0, 4, 7]
   },
   {
     "nom": "Francis",
@@ -24,7 +26,8 @@
     "prev_rank": 6,
     "prev_pts": 37,
     "avatar": "/assets/francis.png",
-    "choix": ["Hoshoryu", "Kotonowaka", "Hokutofuji", "Ryuden", "Takarafuji", "Atamifuji"]
+    "choix": ["Hoshoryu", "Kotonowaka", "Hokutofuji", "Ryuden", "Takarafuji", "Atamifuji"],
+    "score": [0, 5, 7]
   },
   {
     "nom": "Benjamin",
@@ -33,7 +36,8 @@
     "prev_rank": -1,
     "prev_pts": -1,
     "avatar": "/assets/benjamin.png",
-    "choix": ["Kirishima", "Daieisho", "Tamawashi", "Gonoyama", "Shonannoumi", "Takarafuji"]
+    "choix": ["Kirishima", "Daieisho", "Tamawashi", "Gonoyama", "Shonannoumi", "Takarafuji"],
+    "score": [0, 3, 6]
   },
   {
     "nom": "Johnnatan",
@@ -42,7 +46,8 @@
     "prev_rank": 2,
     "prev_pts": 50,
     "avatar": "/assets/johnnatan.png",
-    "choix": ["Hoshoryu", "Kotonowaka", "Hokutofuji", "Gonoyama", "Shonannoumi", "Atamifuji"]
+    "choix": ["Hoshoryu", "Kotonowaka", "Hokutofuji", "Gonoyama", "Shonannoumi", "Atamifuji"],
+    "score": [0, 5, 8]
   },  {
     "nom": "Félix-Olivier",
     "shikona_fr": "Ferikkusu",
@@ -50,7 +55,8 @@
     "prev_rank": -1,
     "prev_pts": -1,
     "avatar": "/assets/felix.png",
-    "choix": ["Wakamotoharu", "Kotonowaka", "Hokutofuji", "Shonannoumi", "Gonoyama", "Atamifuji"]
+    "choix": ["Wakamotoharu", "Kotonowaka", "Hokutofuji", "Shonannoumi", "Gonoyama", "Atamifuji"],
+    "score": [0, 4, 7]
   },  {
     "nom": "Jérémie",
     "shikona_fr": "Eremiya",
@@ -58,7 +64,8 @@
     "prev_rank": 4,
     "prev_pts": 42,
     "avatar": "/assets/jeremie.png",
-    "choix": ["Hoshoryu", "Kotonowaka", "Hokutofuji", "Shonannoumi", "Ryuden", "Atamifuji"]
+    "choix": ["Hoshoryu", "Kotonowaka", "Hokutofuji", "Shonannoumi", "Ryuden", "Atamifuji"],
+    "score": [0, 4, 7]
   },  {
     "nom": "Jonathan",
     "shikona_fr": "Jonasan",
@@ -66,7 +73,8 @@
     "prev_rank": 1,
     "prev_pts": 51,
     "avatar": "/assets/jonathan.png",
-    "choix": ["Hoshoryu", "Kotonowaka", "Hokutofuji", "Abi", "Kotoshoho", "Atamifuji"]
+    "choix": ["Hoshoryu", "Kotonowaka", "Hokutofuji", "Abi", "Kotoshoho", "Atamifuji"],
+    "score": [0, 4, 8]
   },  {
     "nom": "Salma",
     "shikona_jp": "サルマ",
@@ -74,7 +82,8 @@
     "prev_rank": 0,
     "prev_pts": 0,
     "avatar": "/assets/salma.png",
-    "choix": ["Hoshoryu", "Kotonowaka", "Tamawashi", "Kinbozan", "Atamifuji", "Kagayaki"]
+    "choix": ["Hoshoryu", "Kotonowaka", "Tamawashi", "Kinbozan", "Atamifuji", "Kagayaki"],
+    "score": [0, 5, 7]
   },  {
     "nom": "Joshua",
     "shikona_fr": "Yoshua",
@@ -82,6 +91,7 @@
     "prev_rank": 3,
     "prev_pts": 49,
     "avatar": "/assets/joshua.png",
-    "choix": ["Kirishima", "Hoshoryu", "Asanoyama", "Gonoyama", "Takayasu", "Kinbozan"]
+    "choix": ["Kirishima", "Hoshoryu", "Asanoyama", "Gonoyama", "Takayasu", "Kinbozan"],
+    "score": [0, 6, 10]
   }
 ]

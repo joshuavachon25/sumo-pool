@@ -20,9 +20,10 @@ resultats.sort((j1, j2) => (j1.score < j2.score) ? 1 : (j1.score > j2.score) ? -
 ---
 
 <Layout title={pageTitle}>
+	<a target="_blank" href=`https://youtu.be/KiLqXfnXnoc` class="btn fixed bottom-10 right-10">Récap du jour {import.meta.env.PUBLIC_BASHO_DAY}</a>
 	<div class="px-4 sm:px-6 lg:px-8">
 
-		<div class="mt-8 flow-root">
+		<div class="mt-3 flow-root">
 			<div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
 				<div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
 					<table class="min-w-full divide-y divide-gray-300">
@@ -67,7 +68,7 @@ resultats.sort((j1, j2) => (j1.score < j2.score) ? 1 : (j1.score > j2.score) ? -
 
 						</tbody>
 					</table>
-					<p class="text-xs pt-10">Note: Basé sur l'api de la <a href="https://www.sumo.or.jp/EnHonbashoMain/torikumiAjax/1/1/" class="text-red-700">Nihon Sumo Kyokai</a> et automatisé via Github CI</p>
+					<p class="text-xs pt-10">Scores: <a href="https://www.sumo.or.jp/EnHonbashoMain/torikumiAjax/1/1/" class="text-red-700">Nihon Sumo Kyokai</a> - MAJ {new Date(Date.now()).toISOString()}</p>
 				</div>
 			</div>
 		</div>
