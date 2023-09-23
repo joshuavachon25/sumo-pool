@@ -7,9 +7,9 @@
     "prev_pts": 34,
     "avatar": "/assets/daniele.png",
     "choix": ["Hoshoryu", "Wakamotoharu", "Gonoyama", "Kinbozan", "Atamifuji", "Kagayaki"],
-    "score": [0, 5, 7, 11, 16, 20, 24, 27, 31, 32, 35, 39, 42],
-    "daily": [0, 5, 2, 4, 5, 4, 4, 3, 4, 1, 3, 4, 3],
-    "torikumi": [0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0]
+    "score": [0, 5, 7, 11, 16, 20, 24, 27, 31, 32, 35, 39, 42, 44],
+    "daily": [0, 5, 2, 4, 5, 4, 4, 3, 4, 1, 3, 4, 3, 2],
+    "torikumi": [0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0]
   },
   {
     "nom": "Sébastien",
@@ -19,9 +19,9 @@
     "prev_pts": 37,
     "avatar": "/assets/sebastien.png",
     "choix": ["Kirishima", "Nishikigi", "Hokutofuji", "Gonoyama", "Kotoshoho", "Daishoho"],
-    "score": [0, 4, 7, 11, 14, 17, 19, 22, 24, 27, 30, 34, 34 ],
-    "daily": [0, 4, 3, 4, 3, 3, 2, 3, 2, 3, 3, 4, 0],
-    "torikumi": [0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0]
+    "score": [0, 4, 7, 11, 14, 17, 19, 22, 24, 27, 30, 34, 34, 36 ],
+    "daily": [0, 4, 3, 4, 3, 3, 2, 3, 2, 3, 3, 4, 0, 2],
+    "torikumi": [0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0]
   },
   {
     "nom": "Francis",
@@ -31,9 +31,9 @@
     "prev_pts": 37,
     "avatar": "/assets/francis.png",
     "choix": ["Hoshoryu", "Kotonowaka", "Hokutofuji", "Ryuden", "Takarafuji", "Atamifuji"],
-    "score": [0, 5, 7, 12, 14, 17, 21, 23, 25, 28, 34, 37, 39],
-    "daily": [0, 5, 2, 5, 2, 3, 4, 2, 2, 3, 6, 3, 2],
-    "torikumi": [0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0]
+    "score": [0, 5, 7, 12, 14, 17, 21, 23, 25, 28, 34, 37, 39, 42],
+    "daily": [0, 5, 2, 5, 2, 3, 4, 2, 2, 3, 6, 3, 2, 3],
+    "torikumi": [0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0]
   },
   {
     "nom": "Benjamin",
@@ -43,9 +43,9 @@
     "prev_pts": -1,
     "avatar": "/assets/benjamin.png",
     "choix": ["Kirishima", "Daieisho", "Tamawashi", "Gonoyama", "Shonannoumi", "Takarafuji"],
-    "score": [0, 3, 6, 9, 11, 14, 16, 21, 24, 26, 28, 31, 34],
-    "daily": [0, 3, 3, 3, 2, 3, 2, 5, 3, 2, 2, 3, 3],
-    "torikumi": [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0]
+    "score": [0, 3, 6, 9, 11, 14, 16, 21, 24, 26, 28, 31, 34, 38],
+    "daily": [0, 3, 3, 3, 2, 3, 2, 5, 3, 2, 2, 3, 3, 4],
+    "torikumi": [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1]
   },
   {
     "nom": "Johnnatan",
@@ -55,9 +55,9 @@
     "prev_pts": 50,
     "avatar": "/assets/johnnatan.png",
     "choix": ["Hoshoryu", "Kotonowaka", "Hokutofuji", "Gonoyama", "Shonannoumi", "Atamifuji"],
-    "score": [0, 5, 8, 13, 16, 18, 23, 26, 30, 33, 37, 40, 42],
-    "daily": [0, 5, 3, 5, 3, 2, 5, 3, 4, 3, 4, 3, 2],
-    "torikumi": [0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0]
+    "score": [0, 5, 8, 13, 16, 18, 23, 26, 30, 33, 37, 40, 42, 44],
+    "daily": [0, 5, 3, 5, 3, 2, 5, 3, 4, 3, 4, 3, 2, 2],
+    "torikumi": [0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0]
   },  {
     "nom": "Félix-Olivier",
     "shikona_fr": "Ferikkusu",
@@ -66,9 +66,9 @@
     "prev_pts": -1,
     "avatar": "/assets/felix.png",
     "choix": ["Wakamotoharu", "Kotonowaka", "Hokutofuji", "Shonannoumi", "Gonoyama", "Atamifuji"],
-    "score": [0, 4, 7, 13, 17, 19, 24, 28, 33, 36, 39, 41, 43],
-    "daily": [0, 4, 3, 6, 4, 2, 5, 4, 5, 3, 3, 2, 2],
-    "torikumi": [0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0]
+    "score": [0, 4, 7, 13, 17, 19, 24, 28, 33, 36, 39, 41, 43, 46],
+    "daily": [0, 4, 3, 6, 4, 2, 5, 4, 5, 3, 3, 2, 2, 3],
+    "torikumi": [0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0]
   },  {
     "nom": "Jérémie",
     "shikona_fr": "Eremiya",
@@ -77,9 +77,9 @@
     "prev_pts": 42,
     "avatar": "/assets/jeremie.png",
     "choix": ["Hoshoryu", "Kotonowaka", "Hokutofuji", "Shonannoumi", "Ryuden", "Atamifuji"],
-    "score": [0, 4, 7, 12, 14, 16, 21, 23, 26, 29, 34, 37, 40],
-    "daily": [0, 4, 3, 5, 2, 2, 5, 2, 3, 3, 5, 3, 3],
-    "torikumi": [0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0]
+    "score": [0, 4, 7, 12, 14, 16, 21, 23, 26, 29, 34, 37, 40, 42],
+    "daily": [0, 4, 3, 5, 2, 2, 5, 2, 3, 3, 5, 3, 3, 2],
+    "torikumi": [0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0]
   },  {
     "nom": "Jonathan",
     "shikona_fr": "Jonasan",
@@ -88,9 +88,9 @@
     "prev_pts": 51,
     "avatar": "/assets/jonathan.png",
     "choix": ["Hoshoryu", "Kotonowaka", "Hokutofuji", "Abi", "Kotoshoho", "Atamifuji"],
-    "score": [0, 4, 8, 12, 15, 17, 21, 22, 25, 30, 36, 40, 42],
-    "daily": [0, 4, 4, 4, 3, 2, 4, 1, 3, 5, 6, 4, 2],
-    "torikumi": [0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0]
+    "score": [0, 4, 8, 12, 15, 17, 21, 22, 25, 30, 36, 40, 42, 44],
+    "daily": [0, 4, 4, 4, 3, 2, 4, 1, 3, 5, 6, 4, 2, 2],
+    "torikumi": [0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0]
   },  {
     "nom": "Salma",
     "shikona_jp": "サルマ",
@@ -99,9 +99,9 @@
     "prev_pts": 0,
     "avatar": "/assets/salma.png",
     "choix": ["Hoshoryu", "Kotonowaka", "Tamawashi", "Kinbozan", "Atamifuji", "Kagayaki"],
-    "score": [0, 5, 7, 10, 14, 16, 20, 21, 23, 25, 29, 32, 35],
-    "daily": [0, 5, 2, 3, 4, 2, 4, 1, 2, 2, 4, 3, 3],
-    "torikumi": [0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0]
+    "score": [0, 5, 7, 10, 14, 16, 20, 21, 23, 25, 29, 32, 35, 38],
+    "daily": [0, 5, 2, 3, 4, 2, 4, 1, 2, 2, 4, 3, 3, 3],
+    "torikumi": [0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0]
   },  {
     "nom": "Joshua",
     "shikona_fr": "Yoshua",
@@ -110,8 +110,8 @@
     "prev_pts": 49,
     "avatar": "/assets/joshua.png",
     "choix": ["Kirishima", "Hoshoryu", "Asanoyama", "Gonoyama", "Takayasu", "Kinbozan"],
-    "score": [0, 6, 10, 12, 15, 19, 23, 27, 30, 33, 35, 40, 44],
-    "daily": [0, 6, 4, 2, 3, 4, 4, 4, 3, 3, 2, 5, 4],
-    "torikumi": [0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1]
+    "score": [0, 6, 10, 12, 15, 19, 23, 27, 30, 33, 35, 40, 44, 47],
+    "daily": [0, 6, 4, 2, 3, 4, 4, 4, 3, 3, 2, 5, 4, 3],
+    "torikumi": [0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0]
   }
 ]
