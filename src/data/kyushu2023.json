@@ -73,11 +73,11 @@
   },
   {
     "nom": "Pierre-Yves",
-    "shikona_fr": "Pieruyvu",
+    "shikona_fr": "Pieruivu",
     "shikona_jp":"セバスチャン",
     "prev_rank": -1,
     "prev_pts": -1,
-    "avatar": "/assets/sebastien.png",
+    "avatar": "/assets/pierreyves.png",
     "choix": ["Takakeisho", "Kirishima", "Takayasu", "Shonannoumi", "Atamifuji", "Ichiyamamoto"],
     "score": [0],
     "daily": [0],
