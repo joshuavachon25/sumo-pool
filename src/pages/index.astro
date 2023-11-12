@@ -13,7 +13,7 @@ torikumi.forEach((sumo) => {
 })
 import.meta.env.PUBLIC_MALADE.split(';').forEach((sumo) => {
 	let malade = sumo.split(',')
-	sumos[malade[0]] ={en: malade[0],jp: "", win: malade[1],lost: malade[2]}
+	sumos[malade[0]] ={en: malade[0],jp: "", win: parseInt(malade[1]),lost: parseInt(malade[2])}
 })
 let resultats = []
 pool.forEach((joueur) => {
