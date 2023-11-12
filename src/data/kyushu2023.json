@@ -1,0 +1,86 @@
+[
+  {
+    "nom": "Joshua",
+    "shikona_fr": "Yoshua",
+    "shikona_jp":"ヨシュア",
+    "prev_rank": 1,
+    "prev_pts": 54,
+    "avatar": "/assets/joshua.png",
+    "choix": ["Kirishima", "Hoshoryu", "Ura", "Takayasu" ,"Gonoyama", "Atamifuji"],
+    "score": [0],
+    "daily": [0],
+    "torikumi": [0]
+  },
+  {
+    "nom": "Salma",
+    "shikona_jp": "サルマ",
+    "shikona_fr":"Saruma",
+    "prev_rank": 9,
+    "prev_pts": 44,
+    "avatar": "/assets/salma.png",
+    "choix": ["Takakeisho", "Daieisho", "Takayasu", "Hokuseiho", "Atamifuji", "Tomokaze"],
+    "score": [0],
+    "daily": [0],
+    "torikumi": [0]
+  },
+  {
+    "nom": "Jonathan",
+    "shikona_fr": "Jonasan",
+    "shikona_jp":"ジョナサン",
+    "prev_rank": 5,
+    "prev_pts": 50,
+    "avatar": "/assets/jonathan.png",
+    "choix": ["Takakeisho", "Abi", "Asanoyama", "Meisei", "Midorifuji", "Atamifuji"],
+    "score": [0],
+    "daily": [0],
+    "torikumi": [0]
+  },
+  {
+    "nom": "Jérémie",
+    "shikona_fr": "Eremiya",
+    "shikona_jp":"エレミヤ",
+    "prev_rank": 6,
+    "prev_pts": 49,
+    "avatar": "/assets/jeremie.png",
+    "choix": ["Takakeisho", "Daieisho", "Atamifuji", "Myogiryu", "Tomokaze", "Ichiyamamoto"],
+    "score": [0],
+    "daily": [0],
+    "torikumi": [0]
+  },
+  {
+    "nom": "Benjamin",
+    "shikona_fr": "Benjamin",
+    "shikona_jp":"ベンジャミン",
+    "prev_rank": 8,
+    "prev_pts": 44,
+    "avatar": "/assets/benjamin.png",
+    "choix": ["Takakeisho", "Daieisho", "Asanoyama", "Gonoyama", "Atamifuji", "Kitanowaka"],
+    "score": [0],
+    "daily": [0],
+    "torikumi": [0]
+  },
+  {
+    "nom": "Francis",
+    "shikona_fr": "Furanshisu",
+    "shikona_jp":"フランシス",
+    "prev_rank": 6,
+    "prev_pts": 49,
+    "avatar": "/assets/francis.png",
+    "choix": ["Takakeisho", "Daieisho", "Takayasu", "Midorifuji", "Kinbozan", "Churanoumi"],
+    "score": [0],
+    "daily": [0],
+    "torikumi": [0]
+  },
+  {
+    "nom": "Pierre-Yves",
+    "shikona_fr": "Pieruyvu",
+    "shikona_jp":"セバスチャン",
+    "prev_rank": -1,
+    "prev_pts": -1,
+    "avatar": "/assets/sebastien.png",
+    "choix": ["Takakeisho", "Kirishima", "Takayasu", "Shonannoumi", "Atamifuji", "Ichiyamamoto"],
+    "score": [0],
+    "daily": [0],
+    "torikumi": [0]
+  }
+]
