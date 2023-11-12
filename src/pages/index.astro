@@ -11,6 +11,10 @@ torikumi.forEach((sumo) => {
 	sumos[sumo.east.shikona_eng.toLowerCase()] = {en: sumo.east.shikona_eng,jp: sumo.east.shikona, win: sumo.east.won_number, lost: sumo.east.lost_number}
 	sumos[sumo.west.shikona_eng.toLowerCase()] ={en: sumo.west.shikona_eng,jp: sumo.west.shikona, win: sumo.west.won_number,lost: sumo.west.lost_number}
 })
+import.meta.env.PUBLIC_MALADE.split(';').forEach((sumo) => {
+	let malade = sumo.split(',')
+	sumos[malade[0]] ={en: malade[0],jp: "", win: malade[1],lost: malade[2]}
+})
 let resultats = []
 pool.forEach((joueur) => {
 	let tmp_score =  sumos[joueur.choix[0].toLowerCase()].win + sumos[joueur.choix[1].toLowerCase()].win + sumos[joueur.choix[2].toLowerCase()].win + sumos[joueur.choix[3].toLowerCase()].win + sumos[joueur.choix[4].toLowerCase()].win + sumos[joueur.choix[5].toLowerCase()].win
