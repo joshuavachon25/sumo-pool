@@ -82,5 +82,17 @@
     "score": [0, 6],
     "daily": [0, 6],
     "torikumi": [0, 1]
+  },
+  {
+    "nom": "Johnnatan",
+    "shikona_fr": "Yonnasan",
+    "shikona_jp":"ジョナサン",
+    "prev_rank": 5,
+    "prev_pts": 49,
+    "avatar": "/assets/johnnatan.png",
+    "choix": ["Takakeisho", "Abi", "Takayasu", "Hokuseiho", "Myogiryu", "Atamifuji"],
+    "score": [0, 5],
+    "daily": [0, 5],
+    "torikumi": [0, 1]
   }
 ]
