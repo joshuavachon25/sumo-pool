@@ -19,8 +19,7 @@ let resultats = []
 pool.forEach((joueur) => {
 	let initialValue = 0
 	let tmp_score =  sumos[joueur.choix[0].toLowerCase()].win + sumos[joueur.choix[1].toLowerCase()].win + sumos[joueur.choix[2].toLowerCase()].win + sumos[joueur.choix[3].toLowerCase()].win + sumos[joueur.choix[4].toLowerCase()].win + sumos[joueur.choix[5].toLowerCase()].win
-	resultats.push({nom: joueur.nom, rang: joueur.prev_rank, prev: joueur.prev_pts, avatar: joueur.avatar, fr: joueur.shikona_fr, jp: joueur.shikona_jp, score: tmp_score, choix: joueur.choix.join(', '), plus: tmp_score - joueur.score[import.meta.env.PUBLIC_BASHO_DAY - 1], torikumi: joueur.torikumi.reduce((accumulator, currentValue) => accumulator + currentValue,
-			initialValue,)  })
+	resultats.push({nom: joueur.nom, rang: joueur.prev_rank, prev: joueur.prev_pts, avatar: joueur.avatar, fr: joueur.shikona_fr, jp: joueur.shikona_jp, score: tmp_score, choix: joueur.choix.join(', '), plus: tmp_score - joueur.score[import.meta.env.PUBLIC_BASHO_DAY - 1], torikumi: joueur.torikumi })
 })
 resultats.sort((j1, j2) => (j1.score < j2.score) ? 1 : (j1.score > j2.score) ? -1: 0)
 

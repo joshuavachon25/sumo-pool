@@ -7,9 +7,9 @@
     "prev_pts": 54,
     "avatar": "/assets/joshua.png",
     "choix": ["Kirishima", "Hoshoryu", "Ura", "Takayasu" ,"Gonoyama", "Atamifuji"],
-    "score": [0, 4, 7, 11],
-    "daily": [0, 4, 3, 4],
-    "torikumi": [0, 1]
+    "score": [0, 4, 7, 11, 14],
+    "daily": [0, 4, 3, 4, 3],
+    "torikumi": "⚪⚫⚪⚫"
   },
   {
     "nom": "Salma",
@@ -19,9 +19,9 @@
     "prev_pts": 44,
     "avatar": "/assets/salma.png",
     "choix": ["Takakeisho", "Daieisho", "Takayasu", "Hokuseiho", "Atamifuji", "Tomokaze"],
-    "score": [0, 5, 10, 14],
-    "daily": [0, 5, 5, 4],
-    "torikumi": [0, 1]
+    "score": [0, 5, 10, 14, 17],
+    "daily": [0, 5, 5, 4, 3],
+    "torikumi": "⚪⚪⚪⚫"
   },
   {
     "nom": "Jonathan",
@@ -31,9 +31,9 @@
     "prev_pts": 50,
     "avatar": "/assets/jonathan.png",
     "choix": ["Takakeisho", "Abi", "Asanoyama", "Meisei", "Midorifuji", "Atamifuji"],
-    "score": [0, 3, 6, 9],
-    "daily": [0, 3, 3, 3],
-    "torikumi": [0, 0]
+    "score": [0, 3, 6, 9, 12],
+    "daily": [0, 3, 3, 3, 3],
+    "torikumi": "⚫⚫⚫⚫"
   },
   {
     "nom": "Jérémie",
@@ -43,9 +43,9 @@
     "prev_pts": 49,
     "avatar": "/assets/jeremie.png",
     "choix": ["Takakeisho", "Daieisho", "Atamifuji", "Myogiryu", "Tomokaze", "Ichiyamamoto"],
-    "score": [0, 4, 9, 15],
-    "daily": [0, 4, 5, 6],
-    "torikumi": [0, 1]
+    "score": [0, 4, 9, 15, 19],
+    "daily": [0, 4, 5, 6, 4],
+    "torikumi": "⚪⚪⚪⚪"
   },
   {
     "nom": "Benjamin",
@@ -55,9 +55,9 @@
     "prev_pts": 44,
     "avatar": "/assets/benjamin.png",
     "choix": ["Takakeisho", "Daieisho", "Asanoyama", "Gonoyama", "Atamifuji", "Kitanowaka"],
-    "score": [0, 4, 8, 12],
-    "daily": [0, 4, 4, 4],
-    "torikumi": [0, 1]
+    "score": [0, 4, 8, 12, 15],
+    "daily": [0, 4, 4, 4, 3],
+    "torikumi": "⚪⚪⚪⚫"
   },
   {
     "nom": "Francis",
@@ -67,9 +67,9 @@
     "prev_pts": 49,
     "avatar": "/assets/francis.png",
     "choix": ["Takakeisho", "Daieisho", "Takayasu", "Midorifuji", "Kinbozan", "Churanoumi"],
-    "score": [0, 5, 8, 12],
-    "daily": [0, 5, 3, 4],
-    "torikumi": [0, 1]
+    "score": [0, 5, 8, 12, 17],
+    "daily": [0, 5, 3, 4, 5],
+    "torikumi": "⚪⚫⚪⚪"
   },
   {
     "nom": "Pierre-Yves",
@@ -79,9 +79,9 @@
     "prev_pts": -1,
     "avatar": "/assets/pierreyves.png",
     "choix": ["Takakeisho", "Kirishima", "Takayasu", "Shonannoumi", "Atamifuji", "Ichiyamamoto"],
-    "score": [0, 6, 11, 16],
-    "daily": [0, 6, 5, 5],
-    "torikumi": [0, 1]
+    "score": [0, 6, 11, 16, 19],
+    "daily": [0, 6, 5, 5, 3],
+    "torikumi": "⚪⚪⚪⚫"
   },
   {
     "nom": "Johnnatan",
@@ -91,8 +91,8 @@
     "prev_pts": 49,
     "avatar": "/assets/johnnatan.png",
     "choix": ["Takakeisho", "Abi", "Takayasu", "Hokuseiho", "Myogiryu", "Atamifuji"],
-    "score": [0, 5, 8, 11],
-    "daily": [0, 5, 3, 3],
-    "torikumi": [0, 1]
+    "score": [0, 5, 8, 11, 14],
+    "daily": [0, 5, 3, 3, 3],
+    "torikumi": "⚪⚫⚫⚫"
   }
 ]
