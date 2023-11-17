@@ -87,7 +87,7 @@ resultats.sort((j1, j2) => (j1.score < j2.score) ? 1 : (j1.score > j2.score) ? -
 									<span class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-md font-medium text-green-700 ring-1 ring-inset ring-green-600/20">{joueur.score} points (+{joueur.plus})</span>
 								</td>
 								<td class="whitespace-nowrap px-3 py-5 text-sm text-gray-500">
-									<span class="inline-flex items-center rounded-md bg-yellow-400 px-2 py-1 text-md font-medium text-green-700 ring-1 ring-inset ring-green-600/20">{joueur.torikumi}</span>
+									<span class="inline-flex items-center rounded-md bg-yellow-200 px-2 py-1 text-md font-medium text-green-700 ring-1 ring-inset ring-green-600/20">{joueur.torikumi}</span>
 								</td>
 								<td class="relative whitespace-nowrap py-5 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
 									<Fragment set:html={joueur.choix.replaceAll(',', "<br>")} />
