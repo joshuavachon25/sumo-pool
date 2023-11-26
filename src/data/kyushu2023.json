@@ -7,9 +7,10 @@
     "prev_pts": 54,
     "avatar": "/assets/joshua.png",
     "choix": ["Kirishima", "Hoshoryu", "Ura", "Takayasu" ,"Gonoyama", "Atamifuji"],
-    "score": [0, 4, 7, 11, 14, 17, 20, 25, 29, 33, 37, 42, 47, 51, 55],
-    "daily": [0, 4, 3, 4, 3, 3, 3, 5, 4, 4, 4, 5, 5, 4, 4],
-    "torikumi": "⚪⚫⚪⚫⚫⚫⚪⚪⚪⚪⚪⚪⚪⚪"
+    "score": [0, 4, 7, 11, 14, 17, 20, 25, 29, 33, 37, 42, 47, 51, 55, 60],
+    "daily": [0, 4, 3, 4, 3, 3, 3, 5, 4, 4, 4, 5, 5, 4, 4, 5],
+    "torikumi": "⚪⚫⚪⚫⚫⚫⚪⚪⚪⚪⚪⚪⚪⚪⚪",
+    "tournoi":"11-4"
   },
   {
     "nom": "Salma",
@@ -19,9 +20,10 @@
     "prev_pts": 44,
     "avatar": "/assets/salma.png",
     "choix": ["Takakeisho", "Daieisho", "Takayasu", "Hokuseiho", "Atamifuji", "Tomokaze"],
-    "score": [0, 5, 10, 14, 17, 20, 23, 27, 29, 33, 37, 41, 46, 49, 52],
-    "daily": [0, 5, 5, 4, 3, 3, 3, 4, 2, 4, 4, 4, 5, 3, 3],
-    "torikumi": "⚪⚪⚪⚫⚫⚫⚪⚫⚪⚪⚪⚪⚫⚫"
+    "score": [0, 5, 10, 14, 17, 20, 23, 27, 29, 33, 37, 41, 46, 49, 52, 53],
+    "daily": [0, 5, 5, 4, 3, 3, 3, 4, 2, 4, 4, 4, 5, 3, 3, 1],
+    "torikumi": "⚪⚪⚪⚫⚫⚫⚪⚫⚪⚪⚪⚪⚫⚫⚫",
+    "tournoi":"8-7"
   },
   {
     "nom": "Jonathan",
@@ -31,9 +33,10 @@
     "prev_pts": 50,
     "avatar": "/assets/jonathan.png",
     "choix": ["Takakeisho", "Abi", "Asanoyama", "Meisei", "Midorifuji", "Atamifuji"],
-    "score": [0, 3, 6, 9, 12, 15, 18, 18, 22, 25, 29, 32, 35, 40, 41],
-    "daily": [0, 3, 3, 3, 3, 3, 3, 0, 4, 3, 4, 3, 3, 5, 1],
-    "torikumi": "⚫⚫⚫⚫⚫⚫⚫⚪⚫⚪⚫⚫⚪⚫"
+    "score": [0, 3, 6, 9, 12, 15, 18, 18, 22, 25, 29, 32, 35, 40, 41, 43],
+    "daily": [0, 3, 3, 3, 3, 3, 3, 0, 4, 3, 4, 3, 3, 5, 1, 2],
+    "torikumi": "⚫⚫⚫⚫⚫⚫⚫⚪⚫⚪⚫⚫⚪⚫⚫",
+    "tournoi":"3-12"
   },
   {
     "nom": "Jérémie",
@@ -43,9 +46,10 @@
     "prev_pts": 49,
     "avatar": "/assets/jeremie.png",
     "choix": ["Takakeisho", "Daieisho", "Atamifuji", "Myogiryu", "Tomokaze", "Ichiyamamoto"],
-    "score": [0, 4, 9, 15, 19, 23, 27, 29, 31, 34, 38, 41, 45, 48, 51],
-    "daily": [0, 4, 5, 6, 4, 4, 4, 2, 2, 3, 4, 3, 4, 3, 3],
-    "torikumi": "⚪⚪⚪⚪⚪⚪⚫⚫⚫⚪⚫⚪⚫⚫"
+    "score": [0, 4, 9, 15, 19, 23, 27, 29, 31, 34, 38, 41, 45, 48, 51, 53],
+    "daily": [0, 4, 5, 6, 4, 4, 4, 2, 2, 3, 4, 3, 4, 3, 3, 2],
+    "torikumi": "⚪⚪⚪⚪⚪⚪⚫⚫⚫⚪⚫⚪⚫⚫⚫",
+    "tournoi":"8-7"
   },
   {
     "nom": "Benjamin",
@@ -55,9 +59,10 @@
     "prev_pts": 44,
     "avatar": "/assets/benjamin.png",
     "choix": ["Takakeisho", "Daieisho", "Asanoyama", "Gonoyama", "Atamifuji", "Kitanowaka"],
-    "score": [0, 4, 8, 12, 15, 17, 19, 21, 25, 27, 30, 33, 37, 42, 44],
-    "daily": [0, 4, 4, 4, 3, 2, 2, 2, 4, 2, 3, 3, 4, 5, 2],
-    "torikumi": "⚪⚪⚪⚫⚫⚫⚫⚪⚫⚫⚫⚪⚪⚫"
+    "score": [0, 4, 8, 12, 15, 17, 19, 21, 25, 27, 30, 33, 37, 42, 44, 46],
+    "daily": [0, 4, 4, 4, 3, 2, 2, 2, 4, 2, 3, 3, 4, 5, 2, 2],
+    "torikumi": "⚪⚪⚪⚫⚫⚫⚫⚪⚫⚫⚫⚪⚪⚫⚫",
+    "tournoi":"6-9"
   },
   {
     "nom": "Francis",
@@ -67,9 +72,10 @@
     "prev_pts": 49,
     "avatar": "/assets/francis.png",
     "choix": ["Takakeisho", "Daieisho", "Takayasu", "Midorifuji", "Kinbozan", "Churanoumi"],
-    "score": [0, 5, 8, 12, 17, 20, 25, 27, 31, 35, 39, 42, 46, 50, 52],
-    "daily": [0, 5, 3, 4, 5, 3, 5, 2, 4, 4, 4, 3, 4, 4, 2],
-    "torikumi": "⚪⚫⚪⚪⚫⚪⚫⚪⚪⚪⚫⚪⚪⚫"
+    "score": [0, 5, 8, 12, 17, 20, 25, 27, 31, 35, 39, 42, 46, 50, 52, 54],
+    "daily": [0, 5, 3, 4, 5, 3, 5, 2, 4, 4, 4, 3, 4, 4, 2, 2],
+    "torikumi": "⚪⚫⚪⚪⚫⚪⚫⚪⚪⚪⚫⚪⚪⚫⚫",
+    "tournoi":"9-6"
   },
   {
     "nom": "Pierre-Yves",
@@ -79,9 +85,10 @@
     "prev_pts": -1,
     "avatar": "/assets/pierreyves.png",
     "choix": ["Takakeisho", "Kirishima", "Takayasu", "Shonannoumi", "Atamifuji", "Ichiyamamoto"],
-    "score": [0, 6, 11, 16, 19, 24, 27, 30, 34, 40, 43, 46, 52, 55, 58],
-    "daily": [0, 6, 5, 5, 3, 5, 3, 3, 4, 6, 3, 3, 6, 3, 3],
-    "torikumi": "⚪⚪⚪⚫⚪⚫⚫⚪⚪⚫⚫⚪⚫⚫"
+    "score": [0, 6, 11, 16, 19, 24, 27, 30, 34, 40, 43, 46, 52, 55, 58, 61],
+    "daily": [0, 6, 5, 5, 3, 5, 3, 3, 4, 6, 3, 3, 6, 3, 3, 3],
+    "torikumi": "⚪⚪⚪⚫⚪⚫⚫⚪⚪⚫⚫⚪⚫⚫⚫",
+    "tournoi":"7-8"
   },
   {
     "nom": "Johnnatan",
@@ -91,8 +98,9 @@
     "prev_pts": 49,
     "avatar": "/assets/johnnatan.png",
     "choix": ["Takakeisho", "Abi", "Takayasu", "Hokuseiho", "Myogiryu", "Atamifuji"],
-    "score": [0, 5, 8, 11, 14, 16, 20, 22, 25, 29, 31, 36, 41, 44, 47],
-    "daily": [0, 5, 3, 3, 3, 2, 4, 2, 3, 4, 2, 5, 5, 3, 3],
-    "torikumi": "⚪⚫⚫⚫⚫⚪⚫⚫⚪⚫⚪⚪⚫⚫"
+    "score": [0, 5, 8, 11, 14, 16, 20, 22, 25, 29, 31, 36, 41, 44, 47, 49],
+    "daily": [0, 5, 3, 3, 3, 2, 4, 2, 3, 4, 2, 5, 5, 3, 3, 2],
+    "torikumi": "⚪⚫⚫⚫⚫⚪⚫⚫⚪⚫⚪⚪⚫⚫⚫",
+    "tournoi":"5-10"
   }
 ]
