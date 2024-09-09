@@ -1,0 +1,245 @@
+[
+  {
+    "nom": "Daniele",
+    "shikona_fr": "Daniere",
+    "shikona_jp": "ダニエレ",
+    "prev_rank": -1,
+    "prev_pts": 0,
+    "avatar": "/assets/daniele.png",
+    "choix": [
+      "Terunofuji",
+      "Hoshoryu",
+      "Takanosho",
+      "Oho",
+      "Wakatakakage",
+      "Churanoumi",
+      "Kagayaki",
+      "Onokatsu"
+    ],
+    "score": [
+      0,
+      2
+    ],
+    "daily": [
+      0,
+      2
+    ],
+    "torikumi": "⚫"
+  },
+  {
+    "nom": "Pierre-Yves",
+    "shikona_fr": "Pieruivu",
+    "shikona_jp": "セバスチャン",
+    "prev_rank": 1,
+    "prev_pts": 61,
+    "avatar": "/assets/pierreyves.png",
+    "choix": [
+      "Terunofuji",
+      "Takakeisho",
+      "Atamifuji",
+      "Mitakeumi",
+      "Wakatakakage",
+      "Oshoma",
+      "Onokatsu",
+      "Shirokuma"
+    ],
+    "score": [
+      0,
+      2
+    ],
+    "daily": [
+      0,
+      2
+    ],
+    "torikumi": "⚫"
+  },
+  {
+    "nom": "Joshua",
+    "shikona_fr": "Yoshua",
+    "shikona_jp": "ヨシュア",
+    "prev_rank": 2,
+    "prev_pts": 60,
+    "avatar": "/assets/joshua.png",
+    "choix": [
+      "Hoshoryu",
+      "Onosato",
+      "Atamifuji",
+      "Mitakeumi",
+      "Gonoyama",
+      "Wakatakakage",
+      "Kinbozan",
+      "Shirokuma"
+    ],
+    "score": [
+      0,
+      3
+    ],
+    "daily": [
+      0,
+      3
+    ],
+    "torikumi": "⚫"
+  },
+  {
+    "nom": "Salma",
+    "shikona_jp": "サルマ",
+    "shikona_fr": "Saruma",
+    "prev_rank": 4,
+    "prev_pts": 53,
+    "avatar": "/assets/salma.png",
+    "choix": [
+      "Terunofuji",
+      "Hiradoumi",
+      "Takanosho",
+      "Shodai",
+      "Wakatakakage",
+      "Endo",
+      "Shirokuma",
+      "Kitanowaka"
+    ],
+    "score": [
+      0,
+      4
+    ],
+    "daily": [
+      0,
+      4
+    ],
+    "torikumi": "⚪"
+  },
+  {
+    "nom": "Karine",
+    "shikona_jp": "サルマ",
+    "shikona_fr": "Kalina",
+    "prev_rank": -1,
+    "prev_pts": -1,
+    "avatar": "/assets/karine.png",
+    "choix": [
+      "Kotozakura",
+      "Hiradoumi",
+      "Tobizaru",
+      "Oho",
+      "Churanoumi",
+      "Endo",
+      "Shirokuma",
+      "Kitanowaka"
+    ],
+    "score": [
+      0,
+      5
+    ],
+    "daily": [
+      0,
+      5
+    ],
+    "torikumi": "⚪"
+  },
+  {
+    "nom": "Sébastien",
+    "shikona_fr": "Sebasuchan",
+    "shikona_jp": "セバスチャン",
+    "prev_rank": -1,
+    "prev_pts": -1,
+    "avatar": "/assets/sebastien.png",
+    "choix": [
+      "Terunofuji",
+      "Kotozakura",
+      "Atamifuji",
+      "Mitakeumi",
+      "Wakatakakage",
+      "Oshoma",
+      "Nishikigi",
+      "Takarafuji"
+    ],
+    "score": [
+      0,
+      2
+    ],
+    "daily": [
+      0,
+      2
+    ],
+    "torikumi": "⚫"
+  },
+  {
+    "nom": "Jonathan",
+    "shikona_fr": "Jonasan",
+    "shikona_jp": "ジョナサン",
+    "prev_rank": 8,
+    "prev_pts": 43,
+    "avatar": "/assets/jonathan.png",
+    "choix": [
+      "Terunofuji",
+      "Takakeisho",
+      "Mitakeumi",
+      "Wakamotoharu",
+      "Wakatakakage",
+      "Endo",
+      "Kagayaki",
+      "Hokutofuji"
+    ],
+    "score": [
+      0,
+      4
+    ],
+    "daily": [
+      0,
+      4
+    ],
+    "torikumi": "⚪"
+  },
+  {
+    "nom": "Francis",
+    "shikona_fr": "Furanshisu",
+    "shikona_jp": "フランシス",
+    "prev_rank": 3,
+    "prev_pts": 54,
+    "avatar": "/assets/francis.png",
+    "choix": [
+      "Terunofuji",
+      "Hiradoumi",
+      "Takanosho",
+      "Shodai",
+      "Wakatakakage",
+      "Endo",
+      "Kagayaki",
+      "Shirokuma"
+    ],
+    "score": [
+      0,
+      4
+    ],
+    "daily": [
+      0,
+      4
+    ],
+    "torikumi": "⚪"
+  },
+  {
+    "nom": "Jérémie",
+    "shikona_fr": "Eremiya",
+    "shikona_jp": "エレミヤ",
+    "prev_rank": 5,
+    "prev_pts": 53,
+    "avatar": "/assets/jeremie.png",
+    "choix": [
+      "Terunofuji",
+      "Hiradoumi",
+      "Takanosho",
+      "Shodai",
+      "Wakatakakage",
+      "Endo",
+      "Kagayaki",
+      "Onokatsu"
+    ],
+    "score": [
+      0,
+      2
+    ],
+    "daily": [
+      0,
+      2
+    ],
+    "torikumi": "⚫"
+  }
+]

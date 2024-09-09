@@ -1,11 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import pool from '../data/kyushu2023.json';
+import pool from '../data/aki2024.json';
 
 let pageTitle =  'Sumo Kyokai'
 let query = await fetch(`https://www.sumo.or.jp/EnHonbashoMain/torikumiAjax/1/${import.meta.env.PUBLIC_BASHO_DAY}`)
 const data = await query.json();
-let torikumi = data["TorikumiData"]
+let torikumi = JSON.parse(JSON.stringify(data))["TorikumiData"]
 let sumos = {}
 torikumi.forEach((sumo) => {
 	sumos[sumo.east.shikona_eng.toLowerCase()] = {en: sumo.east.shikona_eng,jp: sumo.east.shikona, win: sumo.east.won_number, lost: sumo.east.lost_number}
@@ -16,90 +16,146 @@ import.meta.env.PUBLIC_MALADE.split(';').forEach((sumo) => {
 	sumos[malade[0]] ={en: malade[0],jp: "", win: parseInt(malade[1]),lost: parseInt(malade[2])}
 })
 let resultats = []
+// pool.forEach((joueur) => {
+// 	let initialValue = 0
+// 	let tmp_score =  sumos[joueur.choix[0].toLowerCase()].win + sumos[joueur.choix[1].toLowerCase()].win + sumos[joueur.choix[2].toLowerCase()].win + sumos[joueur.choix[3].toLowerCase()].win + sumos[joueur.choix[4].toLowerCase()].win + sumos[joueur.choix[5].toLowerCase()].win + sumos[joueur.choix[6].toLowerCase()].win + sumos[joueur.choix[7].toLowerCase()].win
+// 	resultats.push({nom: joueur.nom, rang: joueur.prev_rank, prev: joueur.prev_pts, avatar: joueur.avatar, fr: joueur.shikona_fr, jp: joueur.shikona_jp, score: tmp_score, choix: joueur.choix.join(', '), plus: tmp_score - joueur.score[import.meta.env.PUBLIC_BASHO_DAY - 1], torikumi: joueur.torikumi })
+// })
+// resultats.sort((j1, j2) => (j1.score < j2.score) ? 1 : (j1.score > j2.score) ? -1: 0)
+// Crée un objet pour stocker les joueurs groupés par score
+let groupedResultats = {};
+
+// Parcours des joueurs dans la pool
 pool.forEach((joueur) => {
-	let initialValue = 0
-	let tmp_score =  sumos[joueur.choix[0].toLowerCase()].win + sumos[joueur.choix[1].toLowerCase()].win + sumos[joueur.choix[2].toLowerCase()].win + sumos[joueur.choix[3].toLowerCase()].win + sumos[joueur.choix[4].toLowerCase()].win + sumos[joueur.choix[5].toLowerCase()].win
-	resultats.push({nom: joueur.nom, rang: joueur.prev_rank, prev: joueur.prev_pts, avatar: joueur.avatar, fr: joueur.shikona_fr, jp: joueur.shikona_jp, score: tmp_score, choix: joueur.choix.join(', '), plus: tmp_score - joueur.score[import.meta.env.PUBLIC_BASHO_DAY - 1], torikumi: joueur.torikumi })
-})
-resultats.sort((j1, j2) => (j1.score < j2.score) ? 1 : (j1.score > j2.score) ? -1: 0)
+	let tmp_score = sumos[joueur.choix[0].toLowerCase()].win + sumos[joueur.choix[1].toLowerCase()].win + sumos[joueur.choix[2].toLowerCase()].win + sumos[joueur.choix[3].toLowerCase()].win + sumos[joueur.choix[4].toLowerCase()].win + sumos[joueur.choix[5].toLowerCase()].win + sumos[joueur.choix[6].toLowerCase()].win + sumos[joueur.choix[7].toLowerCase()].win;
+
+	// Ajout du joueur dans resultats
+	resultats.push({
+		nom: joueur.nom,
+		rang: joueur.prev_rank,
+		prev: joueur.prev_pts,
+		avatar: joueur.avatar,
+		fr: joueur.shikona_fr,
+		jp: joueur.shikona_jp,
+		score: tmp_score,
+		choix: joueur.choix.join(', '),
+		plus: tmp_score - joueur.score[import.meta.env.PUBLIC_BASHO_DAY - 1],
+		torikumi: joueur.torikumi
+	});
+
+	// Groupement des joueurs par score
+	if (!groupedResultats[tmp_score]) {
+		groupedResultats[tmp_score] = [];
+	}
+	groupedResultats[tmp_score].push(joueur);
+});
 
 ---
 
 <Layout title={pageTitle}>
 	<div class="px-4 sm:px-6 lg:px-8 ">
+		<div class="bg-gray-200 flex flex-row text-stone-600 font-bold py-5 px-10 pr-16 right-0 w-auto">
+			<span class="text-[25px] ">Résultat après le jour {import.meta.env.PUBLIC_BASHO_DAY}</span>
+		</div>
 		<div class="mt-3 flow-root">
-			<div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-				<div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
-					<div class="w-full flex justify-center">
-						<ul class="steps">
-							<li data-content="1" class=`step ${import.meta.env.PUBLIC_BASHO_DAY >= 1 ? "step-success" : "step-content" }`><a target="_blank" class=`${import.meta.env.PUBLIC_BASHO_DAY > 1 ? "flex" : "hidden" }` href="https://www3.nhk.or.jp/nhkworld/en/tv/sumo/tournament/202311/day1.html"><img class="w-4 hover:w-10 transition-all duration-300" src="/assets/play.svg"></a></li>
-							<li data-content="2" class=`step ${import.meta.env.PUBLIC_BASHO_DAY >= 2 ? "step-success" : "step-content" }`><a class=`${import.meta.env.PUBLIC_BASHO_DAY > 2 ? "flex" : "hidden" }` target="_blank" href="https://www3.nhk.or.jp/nhkworld/en/tv/sumo/tournament/202311/day2.html"><img class="w-4 hover:w-10 transition-all duration-300" src="/assets/play.svg"></a></li>
-							<li data-content="3" class=`step ${import.meta.env.PUBLIC_BASHO_DAY >= 3 ? "step-success" : "step-content" }`><a class=`${import.meta.env.PUBLIC_BASHO_DAY > 3 ? "flex" : "hidden" }` target="_blank" href="https://www3.nhk.or.jp/nhkworld/en/tv/sumo/tournament/202311/day3.html"><img class="w-4 hover:w-10 transition-all duration-300" src="/assets/play.svg"></a></li>
-							<li data-content="4" class=`step ${import.meta.env.PUBLIC_BASHO_DAY >= 4 ? "step-success" : "step-content" }`><a class=`${import.meta.env.PUBLIC_BASHO_DAY > 4 ? "flex" : "hidden" }` target="_blank" href="https://www3.nhk.or.jp/nhkworld/en/tv/sumo/tournament/202311/day4.html"><img class="w-4 hover:w-10 transition-all duration-300" src="/assets/play.svg"></a></li>
-							<li data-content="5" class=`step ${import.meta.env.PUBLIC_BASHO_DAY >= 5 ? "step-success" : "step-content" }`><a class=`${import.meta.env.PUBLIC_BASHO_DAY > 5 ? "flex" : "hidden" }` target="_blank" href="https://www3.nhk.or.jp/nhkworld/en/tv/sumo/tournament/202311/day5.html"><img class="w-4 hover:w-10 transition-all duration-300" src="/assets/play.svg"></a></li>
-							<li data-content="6" class=`step ${import.meta.env.PUBLIC_BASHO_DAY >= 6 ? "step-success" : "step-content" }`><a class=`${import.meta.env.PUBLIC_BASHO_DAY > 6 ? "flex" : "hidden" }` target="_blank" href="https://www3.nhk.or.jp/nhkworld/en/tv/sumo/tournament/202311/day6.html"><img class="w-4 hover:w-10 transition-all duration-300" src="/assets/play.svg"></a></li>
-							<li data-content="7" class=`step ${import.meta.env.PUBLIC_BASHO_DAY >= 7 ? "step-success" : "step-content" }`><a class=`${import.meta.env.PUBLIC_BASHO_DAY > 7 ? "flex" : "hidden" }` target="_blank" href="https://www3.nhk.or.jp/nhkworld/en/tv/sumo/tournament/202311/day7.html"><img class="w-4 hover:w-10 transition-all duration-300" src="/assets/play.svg"></a></li>
-							<li data-content="8" class=`step ${import.meta.env.PUBLIC_BASHO_DAY >= 8 ? "step-success" : "step-content" }`><a class=`${import.meta.env.PUBLIC_BASHO_DAY > 8 ? "flex" : "hidden" }` target="_blank" href="https://www3.nhk.or.jp/nhkworld/en/tv/sumo/tournament/202311/day8.html"><img class="w-4 hover:w-10 transition-all duration-300" src="/assets/play.svg"></a></li>
-							<li data-content="9" class=`step ${import.meta.env.PUBLIC_BASHO_DAY >= 9 ? "step-success" : "step-content" }`><a class=`${import.meta.env.PUBLIC_BASHO_DAY > 9 ? "flex" : "hidden" }` target="_blank" href="https://www3.nhk.or.jp/nhkworld/en/tv/sumo/tournament/202311/day9.html"><img class="w-4 hover:w-10 transition-all duration-300" src="/assets/play.svg"></a></li>
-							<li data-content="10" class=`step ${import.meta.env.PUBLIC_BASHO_DAY >= 10 ? "step-success" : "step-content" }`><a class=`${import.meta.env.PUBLIC_BASHO_DAY > 10 ? "flex" : "hidden" }` target="_blank" href="https://www3.nhk.or.jp/nhkworld/en/tv/sumo/tournament/202311/day10.html"><img class="w-4 hover:w-10 transition-all duration-300" src="/assets/play.svg"></a></li>
-							<li data-content="11" class=`step ${import.meta.env.PUBLIC_BASHO_DAY >= 11 ? "step-success" : "step-content" }`><a class=`${import.meta.env.PUBLIC_BASHO_DAY > 11 ? "flex" : "hidden" }` target="_blank" href="https://www3.nhk.or.jp/nhkworld/en/tv/sumo/tournament/202311/day11.html"><img class="w-4 hover:w-10 transition-all duration-300" src="/assets/play.svg"></a></li>
-							<li data-content="12" class=`step ${import.meta.env.PUBLIC_BASHO_DAY >= 12 ? "step-success" : "step-content" }`><a class=`${import.meta.env.PUBLIC_BASHO_DAY > 12 ? "flex" : "hidden" }` target="_blank" href="https://www3.nhk.or.jp/nhkworld/en/tv/sumo/tournament/202311/day12.html"><img class="w-4 hover:w-10 transition-all duration-300" src="/assets/play.svg"></a></li>
-							<li data-content="13" class=`step ${import.meta.env.PUBLIC_BASHO_DAY >= 13 ? "step-success" : "step-content" }`><a class=`${import.meta.env.PUBLIC_BASHO_DAY > 13 ? "flex" : "hidden" }` target="_blank" href="https://www3.nhk.or.jp/nhkworld/en/tv/sumo/tournament/202311/day13.html"><img class="w-4 hover:w-10 transition-all duration-300" src="/assets/play.svg"></a></li>
-							<li data-content="14" class=`step ${import.meta.env.PUBLIC_BASHO_DAY >= 14 ? "step-success" : "step-content" }`><a class=`${import.meta.env.PUBLIC_BASHO_DAY > 14 ? "flex" : "hidden" }` target="_blank" href="https://www3.nhk.or.jp/nhkworld/en/tv/sumo/tournament/202311/day14.html"><img class="w-4 hover:w-10 transition-all duration-300" src="/assets/play.svg"></a></li>
-							<li data-content="15" class=`step ${import.meta.env.PUBLIC_BASHO_DAY >= 15 ? "step-success" : "step-content" }`><a class=`${import.meta.env.PUBLIC_BASHO_DAY > 15 ? "flex" : "hidden" }` target="_blank" href="https://www3.nhk.or.jp/nhkworld/en/tv/sumo/tournament/202311/day15.html"><img class="w-4 hover:w-10 transition-all duration-300" src="/assets/play.svg"></a></li>
-						</ul>
+			{Object.keys(groupedResultats).sort((a, b) => b - a).map((score, index) => (
+				<div class="flex justify-between border-b-4 border-gray-300 shadow-xl pt-10 h-48">
+					<div class="flex items-end justify-center">
+						<h2 class="text-[200px] font-black text-gray-300 leading-none">{index + 1}</h2>
+						<h4 class="text-2xl text-gray-500 font-bold">{score} points</h4>
 					</div>
-
-					<table class="min-w-full divide-y divide-gray-300">
-						<thead>
-						<tr>
-							<th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0">Shikona</th>
-							<th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Dernier tournoi</th>
-							<th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Points</th>
-							<th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900" title="Gagnez 4 points et plus par jour pour obtenir une victoire (blanc)">Victoire/Défaite</th>
-							<th scope="col" class="px-3 py-3.5 text-right text-sm font-semibold text-gray-900">Choix de rikishis</th>
-
-						</tr>
-						</thead>
-						<tbody class="divide-y divide-gray-200 bg-white">
-						{resultats.map((joueur, index) => (
-
-							<tr>
-								<td class="whitespace-nowrap py-5 pl-4 pr-3 text-sm sm:pl-0">
-									<div class="flex items-center">
-
-										<div class="avatar">
-											<div class="w-24 rounded-xl">
-												<img src={joueur.avatar} />
-											</div>
-										</div>
-										<div class="ml-4">
-											<div class="font-medium text-gray-900">{joueur.fr} - {joueur.jp}</div>
-											<div class="mt-1 text-gray-500">{joueur.nom}</div>
-										</div>
-									</div>
-								</td>
-								<td class="whitespace-nowrap px-3 py-5 text-sm text-gray-500">
-									<div class="text-gray-900">{joueur.rang > 0 ? joueur.rang + "e position": "Non classé"}</div>
-									<div class="mt-1 text-gray-500">{joueur.prev > 0 ? joueur.prev + " points": "Aucun point"}</div>
-								</td>
-								<td class="whitespace-nowrap px-3 py-5 text-sm text-gray-500">
-									<span class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-md font-medium text-green-700 ring-1 ring-inset ring-green-600/20">{joueur.score} points (+{joueur.plus})</span>
-								</td>
-								<td class="whitespace-nowrap px-3 py-5 text-sm text-gray-500">
-									<span class="inline-flex items-center rounded-md bg-gray-500 px-2 py-1 text-md font-medium text-green-700 ring-1 ring-inset ring-green-600/20">{joueur.torikumi}</span>
-								</td>
-								<td class="relative whitespace-nowrap py-5 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
-									<Fragment set:html={joueur.choix.replaceAll(',', "<br>")} />
-								</td>
-							</tr>
+					<div class="flex-grow flex items-end justify-center ">
+						{groupedResultats[score].map((joueur, index) => (
+							<div class="avatar -mx-16 hover:scale-125 transition duration-300 tooltip" data-tip={`${joueur.nom}: ${joueur.choix.join(', ')}`}>
+								<div class="w-72">
+									<img class="drop-shadow-xl drop-shadow-black " src={joueur.avatar} />
+								</div>
+							</div>
 						))}
-
-						</tbody>
-					</table>
-					<p class="text-xs pt-10">Scores: <a href="https://www.sumo.or.jp/EnHonbashoMain/torikumiAjax/1/1/" class="text-red-700">Nihon Sumo Kyokai</a> - MAJ {new Date(Date.now()).toISOString()}</p>
+					</div>
 				</div>
-			</div>
+			))}
+			<!--{resultats.map((joueur, index) => (-->
+			<!--	<div>-->
+			<!--		<img src={joueur.avatar} />-->
+			<!--	</div>-->
+			<!--))}-->
+			<!--<div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">-->
+			<!--	<div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">-->
+			<!--		<div class="w-full flex justify-center">-->
+
+
+
+
+			<!--			<ul class="steps">-->
+			<!--				<li data-content="1" class=`step ${import.meta.env.PUBLIC_BASHO_DAY >= 1 ? "step-success" : "step-content" }`><a target="_blank" class=`${import.meta.env.PUBLIC_BASHO_DAY > 1 ? "flex" : "hidden" }` href="https://www3.nhk.or.jp/nhkworld/en/tv/sumo/tournament/202311/day1.html"><img class="w-4 hover:w-10 transition-all duration-300" src="/assets/play.svg"></a></li>-->
+			<!--				<li data-content="2" class=`step ${import.meta.env.PUBLIC_BASHO_DAY >= 2 ? "step-success" : "step-content" }`><a class=`${import.meta.env.PUBLIC_BASHO_DAY > 2 ? "flex" : "hidden" }` target="_blank" href="https://www3.nhk.or.jp/nhkworld/en/tv/sumo/tournament/202311/day2.html"><img class="w-4 hover:w-10 transition-all duration-300" src="/assets/play.svg"></a></li>-->
+			<!--				<li data-content="3" class=`step ${import.meta.env.PUBLIC_BASHO_DAY >= 3 ? "step-success" : "step-content" }`><a class=`${import.meta.env.PUBLIC_BASHO_DAY > 3 ? "flex" : "hidden" }` target="_blank" href="https://www3.nhk.or.jp/nhkworld/en/tv/sumo/tournament/202311/day3.html"><img class="w-4 hover:w-10 transition-all duration-300" src="/assets/play.svg"></a></li>-->
+			<!--				<li data-content="4" class=`step ${import.meta.env.PUBLIC_BASHO_DAY >= 4 ? "step-success" : "step-content" }`><a class=`${import.meta.env.PUBLIC_BASHO_DAY > 4 ? "flex" : "hidden" }` target="_blank" href="https://www3.nhk.or.jp/nhkworld/en/tv/sumo/tournament/202311/day4.html"><img class="w-4 hover:w-10 transition-all duration-300" src="/assets/play.svg"></a></li>-->
+			<!--				<li data-content="5" class=`step ${import.meta.env.PUBLIC_BASHO_DAY >= 5 ? "step-success" : "step-content" }`><a class=`${import.meta.env.PUBLIC_BASHO_DAY > 5 ? "flex" : "hidden" }` target="_blank" href="https://www3.nhk.or.jp/nhkworld/en/tv/sumo/tournament/202311/day5.html"><img class="w-4 hover:w-10 transition-all duration-300" src="/assets/play.svg"></a></li>-->
+			<!--				<li data-content="6" class=`step ${import.meta.env.PUBLIC_BASHO_DAY >= 6 ? "step-success" : "step-content" }`><a class=`${import.meta.env.PUBLIC_BASHO_DAY > 6 ? "flex" : "hidden" }` target="_blank" href="https://www3.nhk.or.jp/nhkworld/en/tv/sumo/tournament/202311/day6.html"><img class="w-4 hover:w-10 transition-all duration-300" src="/assets/play.svg"></a></li>-->
+			<!--				<li data-content="7" class=`step ${import.meta.env.PUBLIC_BASHO_DAY >= 7 ? "step-success" : "step-content" }`><a class=`${import.meta.env.PUBLIC_BASHO_DAY > 7 ? "flex" : "hidden" }` target="_blank" href="https://www3.nhk.or.jp/nhkworld/en/tv/sumo/tournament/202311/day7.html"><img class="w-4 hover:w-10 transition-all duration-300" src="/assets/play.svg"></a></li>-->
+			<!--				<li data-content="8" class=`step ${import.meta.env.PUBLIC_BASHO_DAY >= 8 ? "step-success" : "step-content" }`><a class=`${import.meta.env.PUBLIC_BASHO_DAY > 8 ? "flex" : "hidden" }` target="_blank" href="https://www3.nhk.or.jp/nhkworld/en/tv/sumo/tournament/202311/day8.html"><img class="w-4 hover:w-10 transition-all duration-300" src="/assets/play.svg"></a></li>-->
+			<!--				<li data-content="9" class=`step ${import.meta.env.PUBLIC_BASHO_DAY >= 9 ? "step-success" : "step-content" }`><a class=`${import.meta.env.PUBLIC_BASHO_DAY > 9 ? "flex" : "hidden" }` target="_blank" href="https://www3.nhk.or.jp/nhkworld/en/tv/sumo/tournament/202311/day9.html"><img class="w-4 hover:w-10 transition-all duration-300" src="/assets/play.svg"></a></li>-->
+			<!--				<li data-content="10" class=`step ${import.meta.env.PUBLIC_BASHO_DAY >= 10 ? "step-success" : "step-content" }`><a class=`${import.meta.env.PUBLIC_BASHO_DAY > 10 ? "flex" : "hidden" }` target="_blank" href="https://www3.nhk.or.jp/nhkworld/en/tv/sumo/tournament/202311/day10.html"><img class="w-4 hover:w-10 transition-all duration-300" src="/assets/play.svg"></a></li>-->
+			<!--				<li data-content="11" class=`step ${import.meta.env.PUBLIC_BASHO_DAY >= 11 ? "step-success" : "step-content" }`><a class=`${import.meta.env.PUBLIC_BASHO_DAY > 11 ? "flex" : "hidden" }` target="_blank" href="https://www3.nhk.or.jp/nhkworld/en/tv/sumo/tournament/202311/day11.html"><img class="w-4 hover:w-10 transition-all duration-300" src="/assets/play.svg"></a></li>-->
+			<!--				<li data-content="12" class=`step ${import.meta.env.PUBLIC_BASHO_DAY >= 12 ? "step-success" : "step-content" }`><a class=`${import.meta.env.PUBLIC_BASHO_DAY > 12 ? "flex" : "hidden" }` target="_blank" href="https://www3.nhk.or.jp/nhkworld/en/tv/sumo/tournament/202311/day12.html"><img class="w-4 hover:w-10 transition-all duration-300" src="/assets/play.svg"></a></li>-->
+			<!--				<li data-content="13" class=`step ${import.meta.env.PUBLIC_BASHO_DAY >= 13 ? "step-success" : "step-content" }`><a class=`${import.meta.env.PUBLIC_BASHO_DAY > 13 ? "flex" : "hidden" }` target="_blank" href="https://www3.nhk.or.jp/nhkworld/en/tv/sumo/tournament/202311/day13.html"><img class="w-4 hover:w-10 transition-all duration-300" src="/assets/play.svg"></a></li>-->
+			<!--				<li data-content="14" class=`step ${import.meta.env.PUBLIC_BASHO_DAY >= 14 ? "step-success" : "step-content" }`><a class=`${import.meta.env.PUBLIC_BASHO_DAY > 14 ? "flex" : "hidden" }` target="_blank" href="https://www3.nhk.or.jp/nhkworld/en/tv/sumo/tournament/202311/day14.html"><img class="w-4 hover:w-10 transition-all duration-300" src="/assets/play.svg"></a></li>-->
+			<!--				<li data-content="15" class=`step ${import.meta.env.PUBLIC_BASHO_DAY >= 15 ? "step-success" : "step-content" }`><a class=`${import.meta.env.PUBLIC_BASHO_DAY > 15 ? "flex" : "hidden" }` target="_blank" href="https://www3.nhk.or.jp/nhkworld/en/tv/sumo/tournament/202311/day15.html"><img class="w-4 hover:w-10 transition-all duration-300" src="/assets/play.svg"></a></li>-->
+			<!--			</ul>-->
+			<!--		</div>-->
+
+			<!--		<table class="min-w-full divide-y divide-gray-300">-->
+			<!--			<thead>-->
+			<!--			<tr>-->
+			<!--				<th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0">Shikona</th>-->
+			<!--				<th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Dernier tournoi</th>-->
+			<!--				<th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Points</th>-->
+			<!--				<th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900" title="Gagnez 4 points et plus par jour pour obtenir une victoire (blanc)">Victoire/Défaite</th>-->
+			<!--				<th scope="col" class="px-3 py-3.5 text-right text-sm font-semibold text-gray-900">Choix de rikishis</th>-->
+
+			<!--			</tr>-->
+			<!--			</thead>-->
+			<!--			<tbody class="divide-y divide-gray-200 bg-white">-->
+			<!--			{resultats.map((joueur, index) => (-->
+
+			<!--				<tr>-->
+			<!--					<td class="whitespace-nowrap py-5 pl-4 pr-3 text-sm sm:pl-0">-->
+			<!--						<div class="flex items-center">-->
+
+			<!--							<div class="avatar">-->
+			<!--								<div class="w-24 rounded-xl">-->
+			<!--									<img src={joueur.avatar} />-->
+			<!--								</div>-->
+			<!--							</div>-->
+			<!--							<div class="ml-4">-->
+			<!--								<div class="font-medium text-gray-900">{joueur.fr} - {joueur.jp}</div>-->
+			<!--								<div class="mt-1 text-gray-500">{joueur.nom}</div>-->
+			<!--							</div>-->
+			<!--						</div>-->
+			<!--					</td>-->
+			<!--					<td class="whitespace-nowrap px-3 py-5 text-sm text-gray-500">-->
+			<!--						<div class="text-gray-900">{joueur.rang > 0 ? joueur.rang + "e position": "Non classé"}</div>-->
+			<!--						<div class="mt-1 text-gray-500">{joueur.prev > 0 ? joueur.prev + " points": "Aucun point"}</div>-->
+			<!--					</td>-->
+			<!--					<td class="whitespace-nowrap px-3 py-5 text-sm text-gray-500">-->
+			<!--						<span class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-md font-medium text-green-700 ring-1 ring-inset ring-green-600/20">{joueur.score} points (+{joueur.plus})</span>-->
+			<!--					</td>-->
+			<!--					<td class="whitespace-nowrap px-3 py-5 text-sm text-gray-500">-->
+			<!--						<span class="inline-flex items-center rounded-md bg-gray-500 px-2 py-1 text-md font-medium text-green-700 ring-1 ring-inset ring-green-600/20">{joueur.torikumi}</span>-->
+			<!--					</td>-->
+			<!--					<td class="relative whitespace-nowrap py-5 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">-->
+			<!--						<Fragment set:html={joueur.choix.replaceAll(',', "<br>")} />-->
+			<!--					</td>-->
+			<!--				</tr>-->
+			<!--			))}-->
+
+			<!--			</tbody>-->
+			<!--		</table>-->
+			<!--		<p class="text-xs pt-10">Scores: <a href="https://www.sumo.or.jp/EnHonbashoMain/torikumiAjax/1/1/" class="text-red-700">Nihon Sumo Kyokai</a> - MAJ {new Date(Date.now()).toISOString()}</p>-->
+			<!--	</div>-->
+			<!--</div>-->
 		</div>
 	</div>
 </Layout>

@@ -16,25 +16,14 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="h-full">
-	<div class="min-h-full">
-		<div class="bg-[url('/assets/bg.png')] bg-no-repeat bg-cover bg-center pb-80">
-			<nav class="">
-				<div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+	<body class="h-full ">
+	<div class="min-h-full bg-cover bg-[url('/assets/de.jpeg')]">
 
-				</div>
+		<main class="pt-10">
 
-			</nav>
-			<header class="py-10">
-				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-					<h1 class="text-3xl font-bold tracking-tight text-white"></h1>
-				</div>
-			</header>
-		</div>
-
-		<main class="-mt-32">
 			<div class="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
-				<div class="rounded-lg bg-white  px-5 py-6 shadow-xl sm:px-6">
+
+				<div class="rounded-lg bg-white px-5 py-6 shadow-xl sm:px-6">
 					<slot />
 				</div>
 			</div>
